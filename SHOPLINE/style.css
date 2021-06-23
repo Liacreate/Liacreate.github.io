@@ -437,7 +437,7 @@
 .info-size{
     display: flex; 
     flex-wrap: wrap;
-    flex-direction: row-reverse;
+    flex-direction: row;
     margin-left:  20px;
     height: 500px;  
 }
@@ -467,7 +467,7 @@ ul,h3{
     color: #fff;
 }
 .covid{
-    margin-right: 50px;
+    margin-left: 1000px;
 }
 .cv-btn{
     padding: 10px 30px;
