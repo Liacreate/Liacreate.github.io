@@ -115,6 +115,7 @@
 }
 .email-input{
     background-color: unset;
+    padding: 6px 0 ;
     font-size: 14px;
     border-width:  0 0 2px;
     color: white;
