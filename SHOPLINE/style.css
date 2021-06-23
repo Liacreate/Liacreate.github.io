@@ -354,6 +354,9 @@
     font-family: sans-serif;
     color: #0061ff;
 }
+.brand-txt a::after{
+    content:' →';
+}
 .brand-txt p{
     padding: 50px 70px 40px 0;
     font-size: 16px;
