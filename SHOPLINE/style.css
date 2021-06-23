@@ -320,17 +320,15 @@
 }
 .brand-logo{
     height: 150px;
-    padding: 0 50px;
     display: flex;
     border-bottom: .5px solid #ccc;
     margin: 0 50px;
-    
 }
 .brand-logo a{
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    padding: 35px 35px;
+    padding: 35px 36px;
 }
 .brand-logo a:hover{
     background-color: rgb(177, 198, 253);
