@@ -1,8 +1,6 @@
-
 .header{
     position: fixed;
     width: 100%;
-    height: 125px;
     z-index: 1;
 }
 .login{
@@ -30,79 +28,73 @@
     border-right: .2px solid rgb(187, 187, 187);
 }
 .logo{
-    width: 100%;
-    height: 84px;;
-    background-color: rgb(255, 255, 255);
+    
+    height: auto;
+    background-color: white;
 }
 .logo-wrap{
-    width: 1260px;
     display: flex;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -630px;
 }
-.logo-pic{ 
-    width: 158px;
-    height: 40px;
-    padding-right:16px ;
+.logo-pic{
+    margin: 20px 0 20px 50px;
+    width: 15%;
 }
-.logo img{
-    padding: 30px 30px 30px 55px;
-    height: 40px;
-    width: 158px;
-    height: auto;
-}  
+.logo-pic img{
+    width: 80%;
+}
 .logo-txt{
-    padding:35px 0 30px 100px ;
+    width: 65%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
 }
-.logo a{
-    padding: 10px;
-    font-size: 15px;
+.logo-txt a{
+    width: calc(100%/7);
+    padding: 22px 10px;
     text-decoration: none;
-    color: #324255;
+    color: black;
+    border-bottom: transparent 3px solid;
 }
-.logo a:not(:nth-child(8)){
-    padding: 30px 10px;
+.logo-txt a:hover{
+    border-bottom: #0061ff 3px solid;
+    color: #0061ff;
 }
-.logo a:not(:nth-child(8)):hover{
-    border-bottom: 3px solid #0061FF;
+.logo-btn{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.logo a:hover{
-    color: #007bff;
-}
-.logo-pic:hover{
-    border: none;
-}
-.logo .btn {
-    margin: 0 0 0 250px;
-    background-color: #0061FF;
+.logo-btn a{
+    background-color: #0061ff;
+    padding: 10px;
+    border-radius: 20px;
     color: white;
-    border-radius: 30px;
-}
-.logo .btn:hover{
-    color: rgb(221, 221, 221);
+    text-decoration: none;
+}.logo-btn a:hover{
     background-color:#003fa5 ;
 }
-/* -------------------------------------- */
+/* ---------------------------------------- */
 .banner{
     width: 100%;
-    height: 700px;
+    height: auto;
     background-image: url(title-bg.png);
     background-size: cover;
     display: flex;
     color: rgb(255, 255, 255);
+    padding-top: 100px;
 }
 .banner-wrap{
-    width: 1210px;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -630px;
-    padding: 0 0 0  50px;
+    box-sizing: border-box;
+    padding: 20px;
 }
 .banner-txt{
     width: 45%;
-    padding: 200px 50px 200px 0px;
+    margin: auto;
 }
 .banner-txt h1{
     font-size: 40px; 
@@ -136,46 +128,44 @@
     background-color:#003fa5 ;
 }
 .banner-pic{
-    padding-top: 130px;
-    width: 55%;       
+    width: 55%;  
+    margin: auto;     
 }
 .banner-pic img{
-    width: 100%;         
+    width: 100%;  
 }  
 /* ------------------------------------------- */
 .title{
     width: 100%;
-    height: 300px;
+    height: auto;
 }
 .title-txt{
-    width: 1260px;
-    height: 200px;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -630px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 20px;
 }
 .title h1{
     font-size: 40px;
     text-align: center;
     line-height: 60px;
-    padding: 50px;
     font-weight: bold;
+    padding-bottom: 50px;
 }
 .title p{
     text-align: center;
     line-height: 25px;
     font-family: sans-serif;
 }
-/* ------------------------------------------- */
+/* ------------------------------------------ */
 .container{
     width: 100%; 
-    height: 2323px;   
 }
 .container-size{
-    width: 1260px;
-    left: 50%;
-    position: absolute;
-    margin: 0 0 0 -630px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 .item{
     display: flex;
@@ -186,20 +176,9 @@
 .item:not(:nth-child(4)){
     border-bottom: .5px solid #ccc;
 }
-.item:nth-child(even)
-{
-    flex-direction: row-reverse;
-}
+
 .item-txt{
     width: 50%;
-    height: 400px;
-}
-.item-txt:nth-child(odd){
-    padding-left: 60px;
-}
-.item-txt:nth-child(even){
-    margin-right: 60px;
-   
 }
 .item-pic{
     width: 50%;
@@ -215,20 +194,21 @@
     font-size: 17px;
     line-height: 30px;
     padding-bottom: 20px;
-    padding: 0 0px 40px 0;
+    padding: 0 0 40px 0;
+    box-sizing: content-box;
+    margin-right: 40px;
 }
 .item-txt ul{
-    width: 600px;
-    margin-bottom: 50px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .item-txt li{
     display: inline-block;
-    width: 280px;
+    width: 49%;
     height: 30px;
     margin: 3px 0 0 0;
     font-size: 15px;
     font-family: sans-serif;
-    margin-left: -20px;
 }
 .item-txt a{
     text-decoration: none;
@@ -239,7 +219,7 @@
 }
 .item-pic img{
     padding-top: 20px;
-    width: 580px;
+    width: 100%;
 }
 .container li::before{
     font-family: "Font Awesome 5 Free";
@@ -251,10 +231,10 @@
     color: #0061ff;
     margin-right: 10px;
 }
-/* ---------------------------------------- */
+/* ------------------------------------------ */
 .service{
     width: 100%;
-    height:760px ;
+    height:100% ;
     background-color: #F4F5F7;
 }
 .service .sv-title{
@@ -265,10 +245,10 @@
     font-weight: bold;
 }
 .service-size{
-    width: 1260px;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -630px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 .service-wrap{
     display: flex;
@@ -276,9 +256,8 @@
     justify-content:space-around;   
 }
 .service-item {
-    width: 320px;
-    height: 250px;
-    margin: 10px;
+    width: calc(100%/3 - 20px);
+    padding: 10px;
 }
 .service-pic{
     margin: 0 auto;
@@ -293,9 +272,10 @@
     padding: 35px;
 }
 .service-txt h2{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     padding: 10px;
+    font-weight: bold;
 }
 .service-txt {
     font-size: 15px;
@@ -303,10 +283,10 @@
     padding: 10px;
     font-family: sans-serif;
 }
-/* ---------------------------------------- */
+/* -------------------------------- */
 .recommend{
     width: 100%;
-    height: 630px;
+    height: auto;
 }
 .recommend h1{
     font-size: 40px;
@@ -317,31 +297,38 @@
     color: #0061ff;
 }
 .brand-wrap{
-    width: 1260px;
-    height: 510px;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -630px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 .brand-logo{
     height: 150px;
     display: flex;
     border-bottom: .5px solid #ccc;
-    margin: 0 50px;
 }
 .brand-logo a{
     text-align: center;
     width: 20%;
     margin: 0 auto;
-    padding: 35px 0;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box;
 }
 .brand-logo a:hover{
-    background-color: rgb(177, 198, 253);
     border-bottom: 3px solid #0061ff;
 }
 .brand-logo img{
-    margin: 0 20px;
-    height: 80px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 .brand-info{
     margin: 30px 0;
@@ -349,7 +336,6 @@
 }
 .brand-txt{
     width: 43%;
-    margin-left: 50px ;
 }
 .brand-txt a{
     font-size: 15px;
@@ -361,7 +347,7 @@
     content:' →';
 }
 .brand-txt p{
-    padding: 50px 70px 40px 0;
+    padding: 20px 10px 10px 0;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 1.5px;
@@ -379,10 +365,10 @@
     width: 100%;
     height: 260px;
 }
-/* ------------------------------------- */
+/* ----------------------------------------- */
 .free-trial{
     width: 100%;
-    height: 400px; 
+    height: auto; 
     background-color: #172b4d; 
     background-image: url(bg-1.png),url(bg-2.png); 
     background-position: -200px top,110% bottom;
@@ -390,36 +376,33 @@
     background-size: 820px auto, 480px auto;
 }
 .free-trial-size{
-    width: 1260px;
-    height: 400px;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -630px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 50px 20px;
 }
 .free-trial-size h1{
-    padding: 100px 0 50px 50px;
+    width: 100%;
     line-height: 60px;
-    font-size: 38px;
+    font-size: 35px;
     font-family: sans-serif;
     color: white;
 }
 .free-trial-size .blue{
-    margin-top: -85px;
+    margin-top: -35px;
     padding: 10px;
     height: 10x;
     width: 120px;
     background-color:#0061ff;
-    margin-left: 50px;
 }
 
 .free-trial-size .free-btn{
-    margin-left: 50px;
     margin-top: 100px;
     padding: 20px 0;
 }
 .free-trial-size a{
     background-color: #0061ff;
-    padding: 10px 30px 10px 125px;
+    padding: .5% 1.5% .5% 6%;
     text-decoration: none;
     color: white;
     border-radius: 20px;
@@ -427,53 +410,50 @@
 /* -------------------------------------- */
 .information{
     width: 100%;
-    height: 660px;
+    height: auto;
     background-color: #00142D;
-    display: flex;
-}
-.info-wrap{
-    width: 1260px;
-    position: absolute;
-    left: 50%;
-    margin: 50px 0 0 -630px;
-    border-top:1px solid #777 ;
     display: flex;
     flex-wrap: wrap;
 }
 .info-size{
+    width: 100%;
+    height: 90%;
     display: flex; 
     flex-wrap: wrap;
-    flex-direction: row;
-    margin-left:  20px;
-    height: 500px;  
+    margin: 30px 0px;
+    border-bottom: 1px solid #49505c;
+    border-top: 1px solid #49505c;
+} 
+.info-item{
+    margin: 30px 0 0 30px;
+    width: calc(100%/7 - 30px);
 }
-.info-wrap h3{
+.info-item h3{
     font-size: 17px;
     color: white;
     font-family: sans-serif;
     padding-bottom: 10px;
 }
-ul,h3{
-    margin: 30px 0 30px 15px;
-    width: 160px;
-}
-.info-wrap li{
+.info-item li{
     display: inline-block;
-    width: 115px;
-    height: 20px;
+    width: 100%;
     margin: 10px 0;
     font-size: 15px;
     font-family: sans-serif;
 }
-.info-wrap ul a{
+.info-item ul a{
     text-decoration: none;
     color: #748094;
 }
-.info-wrap ul a:hover{
+.info-item ul a:hover{
     color: #fff;
-}
+} 
 .covid{
-    margin-left: 1000px;
+    height: auto;
+    width: 100%;
+    margin: 20px 50px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .cv-btn{
     padding: 10px 30px;
@@ -486,12 +466,15 @@ ul,h3{
     background-color: #dbf8eda4;
 }
 .bottom{    
-    width: 1260px;
-    border-top: 1px solid #777;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     color: white;
-    padding: 40px 0 0 0;
+    background-color:#00142D ;
+}
+.map{
+    margin: 20px 20px 40px 20px ;
 }
 .map a{
     color: white;
@@ -509,22 +492,42 @@ ul,h3{
     position: absolute;
     margin: -2px -10px 0 -10px; 
 }
+.sns-icon{
+    margin-top: 15px;
+}
+
+.sns-icon a::after{
+    content: '';
+    position: absolute;
+    margin: -7px 5px -5px -8px ;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #172b4d;
+    border-radius: 50%;
+    z-index: -1;
+}
 .sns-icon a{
-    padding: 8px 8px;
-    background-color: #172b4d; 
-    margin: 0 10px;
+    margin: 0 20px;
     color: white;
     font-size: 18px;
     text-decoration: none;
     border-radius: 50%;
+    position: relative;
+    z-index: 2;
 }
 .sns-icon a:hover{  
     color: #0061ff;
 }
+.copyright{
+    margin:10px 20px 10px 10px ;
+}
 .copyright p{
     font-size: 15px;
     line-height: 20px;
-    margin-top: -10px;
     color: #748094;
     padding-right: 10px;
-}
+} 
