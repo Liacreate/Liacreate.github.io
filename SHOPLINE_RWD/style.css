@@ -51,7 +51,7 @@
 }
 .logo-txt a{
     width: calc(100%/7);
-    padding: 22px 10px;
+    padding: 22px 8px;
     text-decoration: none;
     color: black;
     border-bottom: transparent 3px solid;
