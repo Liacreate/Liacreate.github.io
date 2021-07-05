@@ -19,9 +19,11 @@
         let btn2 = document.getElementById("button2");
         let btn3 = document.getElementById("button3");
 
-        btn1.onclick = fetchPokemon;
-        btn2.addEventListener("click",fetchPokemon_appendChild);
-        btn3.onclick =function clearAll(){container.innerHTML="";};
+        window.onload=function(){
+            btn1.onclick = fetchPokemon;
+            btn2.addEventListener("click",fetchPokemon_appendChild);
+            btn3.onclick =function clearAll(){container.innerHTML="";};
+        }
 
         function fetchPokemon(){
             container.innerHTML="";
