@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Hello, world!</title>
+        <style>
+            .list-group{
+                width: 600px;
+                height: 300px;
+                overflow-y: auto;
+                border: 1px solid #777;
+            }
+            .input{
+                width: 600px;
+            }
+            .btn {
+                width: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5 ">
+            <div class="but-group">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-primary" onclick="start()" >開始</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="reset()">放棄重來</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="showAns()">看答案</button>
+                </div>
+            </div>
+            <div class="show" >
+                <ul class="list-group"id="show">
+                </ul>
+            </div>
+            <div class="input">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">猜</span>
+                    <input id="inputtext" type="text" class="form-control" placeholder="guess" aria-label="Recipient's username" aria-describedby="button-addon2" onchange="changetext()">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="addlist()">Button</button>
+                    
+
+            </div>
+        </div>
+        <script>
+            // let showAns = document.getElementById('answer')
+            // let guessbtn = document.getElementsById('button-addon2')
+            var listgroup = document.getElementById('show')
+            var newli ,newa;
+            var result ,input,resultArr,inputArr;
+            var a,b;
+            var strArr=[];
+            
+            
+            window.onload=function(){
+                resultF()
+                inpuText()
+            }
+
+            function start(){
+                resultF()
+            }
+
+            function reset(){
+                listgroup.innerHTML='';
+                inputAll.value='';
+                resultF()
+                inpuText()
+            }
+
+            function showAns(){
+                alert(`${result}`)
+            }
+
+            function aabb(){
+                a=0
+                b=0
+                for(let i = 0 ;i<4;i++){
+                    console.log(resultArr[i] == strArr[i])
+                    if(resultArr[i] == strArr[i]){
+                        a++;
+                    }
+                }
+                var filteredArray = resultArr.filter(value => strArr.includes(value));
+                var ccc = filteredArray.length
+                b= ccc-a;
+                hint = `${a}A${b}B`
+                return  hint
+            }
+
+            function resultF(){
+                let n1,n2,n3,n4;
+                n1= Math.floor(Math.random()*10);
+                n2= Math.floor(Math.random()*10);
+                n3= Math.floor(Math.random()*10);
+                n4= Math.floor(Math.random()*10);
+                result = `${n1}`+`${n2}`+`${n3}`+`${n4}`
+                resultArr= [`${n1}`,`${n2}`,`${n3}`,`${n4}`]
+                return result
+            }
+
+            function inpuText(){
+                inputAll=document.getElementById('inputtext')
+                return inputAll
+            }
+
+
+            function changetext(){
+                strArr=[];
+                for(let i = 0;i<4; i++){
+                    var str= (inputAll.value).substr(i,1);  
+                    strArr = strArr.concat(str)
+                    }
+                    // console.log(strArr)
+            }
+
+            function successOrNot(){
+                // resultF()
+                // inpuText()
+                if(inputAll.value==result){
+                    return 'success'
+                }
+                else{
+                    return 'danger'
+                }
+            }
+
+            function addlist(){
+                aabb()  
+                if(a==4){
+                    alert(`猜對了`)
+                }  
+                newli = document.createElement('li');
+                newli.classList.add('list-group-item')
+                newli.innerHTML='<span class="badge bg-'+`${successOrNot()}`+'">'+`${aabb()}`+'</span>'+`${inputAll.value}`
+                show.appendChild(newli)
+            }
+        </script>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

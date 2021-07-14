@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid #ccc; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .range{
+            width: 300px;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        td>input{
+            background-color: black;
+            color: blanchedalmond;
+            padding: 10px
+        }
+        
+        .reset{
+            margin-top: 20px;
+            width: 100%;
+        }
+        .ans{
+            width: 100%;
+        }
+        .clear{
+            color: red;
+        }
+        .check{
+            color: greenyellow;
+        }
+        .btn{
+            background-color: rgb(15, 106, 190);
+            color: cornsilk;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="range">
+            <p>目前範圍:<span id='small' ></span>~<span id='big'></span></p>
+        </div>
+        
+        <button class="btn" onclick="randomNum()">產生數字</button>
+        <input  id="box" type="text" value="">
+        <!-- <button class="btn" onclick="aa()">aaaa</button> -->
+
+        <table>
+            <tr>
+                <td><input  type="button" value="1" onClick="numBtn('1')"></td>
+                <td><input  type="button" value="2" onClick="numBtn('2')"></td>
+                <td><input  type="button" value="3" onClick="numBtn('3')"></td>
+            </tr>
+            <tr>
+                <td><input  type="button" value="4" onClick="numBtn('4')"></td>
+                <td><input  type="button" value="5" onClick="numBtn('5')"></td>
+                <td><input  type="button" value="6" onClick="numBtn('6')"></td>
+            </tr>
+            <tr>
+                <td><input  type="button" value="7" onClick="numBtn('7')"></td>
+                <td><input  type="button" value="8" onClick="numBtn('8')"></td>
+                <td><input  type="button" value="9" onClick="numBtn('9')"></td>
+            </tr>
+            <tr>
+                <td><input class="clear" type="button" value="X"  onclick="clearAll()"></td>
+                <td><input  type="button" value="0" onClick="numBtn('0')"></td>
+                <td><input  class="check" type="button" value="V" onClick="check()"></td>
+            </tr> 
+            <tr>
+                <td colspan="3"><input class="reset" type="button" value="Reset"  onclick="reset()"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input class="ans" type="button" value="看答案"  onclick="ans()"></td>
+            </tr>
+
+        </table>
+    </div>
+    
+    <script>
+        let result,store ;
+
+        let input = document.getElementById('box');
+        let bigNum = document.getElementById('big');
+        let smallNum = document.getElementById('small');
+
+        bigNumVal=bigNum.innerHTML;
+        smallNumVale=smallNum.innerHTML;
+        window.onload=function(){
+            randomNum()
+            bigNum.innerHTML='100';
+            smallNum.innerHTML='0';
+        }
+        //看答案
+        function ans(){
+            alert(`答案是${result}`)
+        }
+
+        // 重置
+        function reset(){
+            clearAll()
+            randomNum()
+            bigNum.innerHTML='100';
+            smallNum.innerHTML='0';
+        }
+        // 產生亂數
+        function randomNum(){
+            result = Math.floor(Math.random()*100);
+            if(result==0){
+                randomNum()
+            }
+            console.log(result);    
+        }
+
+        // 輸入數字
+        function numBtn(str){ 
+            if(document.getElementById('box').value==null){
+            document.getElementById('box').value=str;
+        }
+            else{
+                document.getElementById('box').value += str;
+            }
+        }
+
+        // 清除
+        function clearAll(){
+            input.value='';
+        }
+
+        // 確認
+        function check(){
+            if(input.value>=100 ){
+                alert('請輸入0~100之間的數字')
+            }
+            else if(input.value<100){
+                if(input.value==result){
+                alert(`中了!答案是${result}`)
+                }
+                else if(input.value<result && input.value != smallNum.innerHTML){
+                    store = input.value;
+                    smallNum.innerHTML=store;
+                    clearAll()
+                }
+                else if(input.value>result && input.value != bigNum.innerHTML){
+                    store = input.value;
+                    bigNum.innerHTML=store
+                    clearAll()
+                }
+                else if(input.value == bigNum.innerHTML ||input.value == smallNum.innerHTML){
+                    alert(`不在範圍內`);
+                    clearAll()
+
+                }
+            }
+        }
+
+        
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
