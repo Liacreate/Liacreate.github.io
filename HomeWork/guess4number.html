@@ -112,7 +112,7 @@
                 strArr=[];
                 for(let i = 0;i<4; i++){
                     var str= (inputAll.value).substr(i,1);  
-                    strArr = strArr.concat(str)
+                    strArr = strArr.concat(str);
                     }
                     // console.log(strArr)
             }
@@ -134,9 +134,9 @@
                     alert(`猜對了`)
                 }  
                 newli = document.createElement('li');
-                newli.classList.add('list-group-item')
-                newli.innerHTML='<span class="badge bg-'+`${successOrNot()}`+'">'+`${aabb()}`+'</span>'+`${inputAll.value}`
-                show.appendChild(newli)
+                newli.classList.add('list-group-item');
+                newli.innerHTML='<span class="badge bg-'+`${successOrNot()}`+'">'+`${aabb()}`+'</span>'+`${inputAll.value}`;
+                show.appendChild(newli);
             }
         </script>
 

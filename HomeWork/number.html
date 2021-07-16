@@ -111,7 +111,7 @@
         }
         //看答案
         function ans(){
-            alert(`答案是${result}`)
+            alert(`答案是${result}`);
         }
 
         // 重置
@@ -148,11 +148,11 @@
         // 確認
         function check(){
             if(input.value>=100 ){
-                alert('請輸入0~100之間的數字')
+                alert('請輸入0~100之間的數字');
             }
             else if(input.value<100){
                 if(input.value==result){
-                alert(`中了!答案是${result}`)
+                alert(`中了!答案是${result}`);
                 }
                 else if(input.value<result && input.value != smallNum.innerHTML){
                     store = input.value;
@@ -164,11 +164,11 @@
                     bigNum.innerHTML=store
                     clearAll()
                 }
-                else if(input.value >= bigNum.innerHTML ||input.value <= smallNum.innerHTML){
-                    alert(`不在範圍內`);
-                    clearAll()
+                // else if(input.value == bigNum.innerHTML ||input.value == smallNum.innerHTML){
+                //     alert(`不在範圍內`);
+                //     clearAll()
 
-                }
+                // }
             }
         }
 
