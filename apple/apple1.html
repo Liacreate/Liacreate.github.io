@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <title>Hello, world!</title>
+        <style>
+          .navbar{
+            background-color:#333;
+          }
+          .nav-item a{
+            color: #b9b9b9;
+            font-family: sans-serif;
+          }
+          .nav-item a:hover{
+            color: white;
+          }
+          .pricebar{
+            z-index:1;
+          }
+          .container-first{
+            background-color: #f5f5f7;
+          }
+          .header-third{
+            background-color: #f5f5f7;
+          }
+          .sec-pic{
+            position: relative;
+            top:50px;
+            height: 500px;
+          }
+          .sec-pic img{
+            width: 400px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0; 
+          }
+          p{
+            font-family: sans-serif;
+          }
+          h1{
+            font-family: sans-serif;
+          }
+          @media screen and (min-width:991px) {
+            .sec-pic{
+            position: sticky; 
+            top:70px;
+            height: 500px;
+            }
+            
+          }
+          label{
+              border: 1px solid #ccc;
+              height: 50px;
+          }
+          .navbar-toggler{
+            border: none;
+          }
+          i{
+            color: #b9b9b9;
+          }
+          i:hover{
+            color: white;
+          }
+          .price{
+            margin: 0 10%;
+          }
+          @media screen and (max-width:991px) {
+            .price{
+            margin:0;
+          }
+          }
+          .pricebar{
+            background-color: rgba(255, 255, 255,0.9);
+            backdrop-filter: blur(5px);
+          }
+
+          .btn{
+            border: 1px solid #ccc;
+            margin: 0px;
+          }
+          .typebtn{
+            width: 100%;
+          }
+          .colorbtn:nth-child(odd){
+            margin-right: 10px;
+          }
+          .colorbtn{
+            margin-top: 10px;
+            width: calc(50% - 7px);
+          }
+          .colorimg{
+            width: 25%;
+            margin: 20px;
+          }
+          .colorArea{
+            border-top:1px solid #ccc ;
+            border-bottom:1px solid #ccc ;
+            padding: 20px 0;
+          }
+          .storagebtn{
+            width: 100%;
+            /* padding: 30px 0; */
+            margin: 10px 0;
+          }
+          .footer{
+            height: 200px;
+          }
+          .leftdiv{
+            text-align: start;
+          }
+          .desText{
+            font-size: 10px;
+            color: gray;
+          }
+          .typebtn{
+            margin:10px 0 ;
+          }
+          .priceArea-p{
+              font-size: 40px;
+          }
+    
+        </style>
+    </head>
+    <body>
+      <header>
+        <nav class="navbar  navbar-expand-lg navbar-dark">
+          <div class="container-fluid ">
+            <!-- <a class="navbar-brand" href="#"><i class="fab fa-apple"></i></a> -->
+            <butto class="navbar-toggler" type="text" data-bs-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
+              <a href="#"><i class="fab fa-apple"></i></a>
+            </butto>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-evenly " id="navbarNavDropdown">
+              <ul class="navbar-nav ms-5 ">
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#"><i class="fab fa-apple"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#" onclick="product(this.innerText)" >Mac</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#" onclick="product(this.innerText)">iPad</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#">iPhon</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#">Watch</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#">TV</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#">Music</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#">支援服務</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link me-5" href="#"><i class="fas fa-shopping-bag"></i></a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+        <div class=" pricebar border-bottom  position-sticky top-0">
+          <div class="container">
+            <div class=" price d-flex pt-3 pb-3 justify-content-between ">
+            <div class="p-name" ></div>
+            <div class="n-price"></div>
+          </div>
+          </div>
+          
+        </div>
+          <!-- 灰 -->
+          <div class="header-third ">
+            <!-- <p class="text-center lh-lg ">以符合條件的 iPad 換購新機，即可獲享折抵優惠。<a href="">進一步了解 Apple Trade In 換購方案</a></p> -->
+          </div>
+
+            <!-- 內容 -->
+        <div class="container mt-5">
+              <div class="container-second row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-"> 
+                <div class="sec-pic col ms-5 ">
+                  <img class="p-img" src="" alt="">
+                </div>
+                <div class="sec-option ms-4 col-4">
+                    <div class="sec-title mb-4">
+                      <h4>全新</h4>
+                      <h1 class="h1"> </h1>
+
+                      <p><br>
+                        </p>
+                    </div>
+                    <div class="sec-txt  ">
+                      <div class="typeArea">
+                        <!-- <button   class=" typebtn  btn d-flex align-items-center justify-content-between ">
+                          <div class="leftdiv">
+                            <p class="">iphon 12 pro</p>
+                            <p class="">6.1吋顯示器</p>
+                          </div>
+                          <div class="rightdiv">
+                            <p >NT$ 33,900起</p>
+                          </div>
+                        </button> -->
+                      </div>
+
+                        <div class="colorArea">
+                      <!-- <button  class="btn colorbtn" >
+                          <img class="colorimg" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-space-gray-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0" alt="">
+                          <p class="">太空灰色</p>
+                      </button>
+                    -->
+                    </div>
+                    <div class="storageArea">
+                    </div>
+                    <div class="priceArea">
+                      <p class="priceArea-p"></p>
+                    </div>
+          </div>
+        </div>
+        <div class="footer">
+
+        </div>
+
+        <script>
+          let url = "https://raw.githubusercontent.com/Liacreate/FileStorage/main/apple.json"
+          let MacObj = {}
+          let productObj ={}
+          let iPadObj = {} 
+          fetch(url)
+            .then(res=>res.json())
+            .then(r=>{
+              // console.log(r);
+              productObj=r
+              MacObj  = r.Mac
+              iPadObj = r.iPad
+
+              console.log(productObj.Mac.name);
+             iPad()
+
+            })
+
+          function product(product){
+              console.log(productObj[product]);
+              console.log(product);
+            document.querySelector('.typeArea').innerHTML="";
+            document.querySelector('.colorArea').innerHTML="";
+            document.querySelector('.storageArea').innerHTML="";
+            document.querySelector('.h1').innerText = `購買${productObj[product].name}`
+
+            document.querySelector('.p-name').innerHTML="";
+            document.querySelector('.p-name').innerText=productObj[product].name
+            document.querySelector('.n-price').innerText=productObj[product].price
+            document.querySelector('.p-img').src= productObj[product].imgurl
+            let typeArr = productObj[product].type
+            let colorArr = productObj[product].color
+            let storageArr = productObj[product].storage
+
+            //type
+            typeArr.forEach(item=>{
+              let typeArea = document.querySelector('.typeArea')
+              let typebtn = document.createElement('button')
+              typebtn.classList.add('btn')
+              typebtn.classList.add('typebtn') 
+              typebtn.classList.add('d-flex') 
+              typebtn.classList.add('align-items-center') 
+              typebtn.classList.add('justify-content-between') 
+              let leftdiv = document.createElement('div')
+              leftdiv.classList.add('leftdiv')
+              let rightdiv = document.createElement('div')
+              rightdiv.classList.add('rightdiv')
+
+              let typeText = document.createElement('p')
+              typeText.innerText=item.type
+              let desText = document.createElement('p')
+              desText.classList.add('desText')
+              desText.innerText=item.des
+              let priceText = document.createElement('p')
+              priceText.innerText = item.price
+
+              typebtn.setAttribute('priVal',item.price)
+
+              console.log(priceText);
+
+              leftdiv.appendChild(typeText);
+              leftdiv.appendChild(desText);
+              rightdiv.appendChild(priceText);
+
+              typebtn.appendChild(leftdiv);
+              typebtn.appendChild(rightdiv);
+
+              typeArea.appendChild(typebtn);
+            })
+            let typebtns = document.getElementsByClassName('typebtn')
+            for(let btn of typebtns){
+              btn.addEventListener('click',function(){
+                // console.log(btn);
+              let priceVal = btn.getAttributeNode('priVal').value;
+                document.querySelector('.priceArea-p').innerText=priceVal;
+                document.querySelector('.n-price').innerText=priceVal
+
+              })}
+
+            // 顏色
+            colorArr.forEach((item,index)=> {
+              let colorbtn = document.createElement('button')
+              let colorArea = document.querySelector('.colorArea')
+              let colorText = document.createElement('p')
+              let colorimg = document.createElement('img')
+              colorbtn.classList.add('btn')
+              colorbtn.classList.add('colorbtn')
+              colorimg.classList.add('colorimg')
+              colorbtn.setAttribute('urlVal', item.productimg);
+              colorimg.setAttribute('src',item.colorimg)
+              colorText.innerText=item.color
+              colorbtn.appendChild(colorimg)
+              colorbtn.appendChild(colorText)
+              colorArea.appendChild(colorbtn)
+            });
+
+            let colorbtns = document.getElementsByClassName('colorbtn')
+            for(let btn of colorbtns){
+              btn.addEventListener('click',function(){
+                // console.log(btn);
+                document.querySelector('.p-img').setAttribute('src',btn.getAttributeNode('urlVal').value)
+              })
+            }
+
+            // 容量
+            storageArr.forEach(item=>{
+              let storagebtn = document.createElement('button')
+              let storageArea = document.querySelector('.storageArea')
+              let storageText = document.createElement('p')
+
+              storagebtn.classList.add('btn')
+              storagebtn.classList.add('colorbtn')
+              storagebtn.classList.add('storagebtn')
+              storagebtn.setAttribute('priVal',item.price)
+              storageText.innerHTML = `${item.size}`
+
+            //   storagebtn.appendChild(storageText);
+            //   storageArea.appendChild(storagebtn);
+            });
+            let storagebtns = document.getElementsByClassName('storagebtn')
+            for(let btn of storagebtns){
+              btn.addEventListener('click',function(){
+                // console.log(btn);
+              let priceVal = btn.getAttributeNode('priVal').value;
+                let val = parseInt(priceVal)
+                document.querySelector('.priceArea-p').innerHTML=val;
+                document.querySelector('.n-price').innerText=val
+                console.log(typeof val);
+              })
+            }
+
+
+          }
+
+          function iPad(){
+            document.querySelector('.typeArea').innerHTML="";
+            document.querySelector('.colorArea').innerHTML="";
+            document.querySelector('.storageArea').innerHTML="";
+            document.querySelector('.h1').innerText = `購買${iPadObj.name}`
+
+            document.querySelector('.p-name').innerHTML="";
+            document.querySelector('.p-name').innerText=productObj.iPad.name
+            document.querySelector('.n-price').innerText=iPadObj.price
+            document.querySelector('.p-img').src= "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-11-select-202104_GEO_TW?wid=1090&hei=1100&fmt=jpeg&qlt=80&.v=1617864731000"
+            let typeArr = iPadObj.type
+            let colorArr = iPadObj.color
+            let storageArr = iPadObj.storage
+
+            //type
+            typeArr.forEach(item=>{
+              let typeArea = document.querySelector('.typeArea')
+              let typebtn = document.createElement('button')
+              typebtn.classList.add('btn')
+              typebtn.classList.add('typebtn') 
+              typebtn.classList.add('d-flex') 
+              typebtn.classList.add('align-items-center') 
+              typebtn.classList.add('justify-content-between') 
+              let leftdiv = document.createElement('div')
+              leftdiv.classList.add('leftdiv')
+              let rightdiv = document.createElement('div')
+              rightdiv.classList.add('rightdiv')
+
+              let typeText = document.createElement('p')
+              typeText.innerText=item.type
+              let desText = document.createElement('p')
+              desText.classList.add('desText')
+              desText.innerText=item.des
+              let priceText = document.createElement('p')
+              priceText.innerText = item.price
+
+              typebtn.setAttribute('priVal',item.price)
+
+              console.log(priceText);
+
+              leftdiv.appendChild(typeText);
+              leftdiv.appendChild(desText);
+              rightdiv.appendChild(priceText);
+
+              typebtn.appendChild(leftdiv);
+              typebtn.appendChild(rightdiv);
+
+              typeArea.appendChild(typebtn);
+            })
+            let typebtns = document.getElementsByClassName('typebtn')
+            for(let btn of typebtns){
+              btn.addEventListener('click',function(){
+                // console.log(btn);
+              let priceVal = btn.getAttributeNode('priVal').value;
+                document.querySelector('.priceArea-p').innerText=priceVal;
+                document.querySelector('.n-price').innerText=priceVal
+
+              })}
+
+            // 顏色
+            colorArr.forEach((item,index)=> {
+              let colorbtn = document.createElement('button')
+              let colorArea = document.querySelector('.colorArea')
+              let colorText = document.createElement('p')
+              let colorimg = document.createElement('img')
+              colorbtn.classList.add('btn')
+              colorbtn.classList.add('colorbtn')
+              colorimg.classList.add('colorimg')
+              colorbtn.setAttribute('urlVal', item.productimg);
+              colorimg.setAttribute('src',item.colorimg)
+              colorText.innerText=item.color
+              colorbtn.appendChild(colorimg)
+              colorbtn.appendChild(colorText)
+              colorArea.appendChild(colorbtn)
+            });
+
+            let colorbtns = document.getElementsByClassName('colorbtn')
+            for(let btn of colorbtns){
+              btn.addEventListener('click',function(){
+                // console.log(btn);
+                document.querySelector('.p-img').setAttribute('src',btn.getAttributeNode('urlVal').value)
+              })
+            }
+
+            // 容量
+            storageArr.forEach(item=>{
+              let storagebtn = document.createElement('button')
+              let storageArea = document.querySelector('.storageArea')
+              let storageText = document.createElement('p')
+
+              storagebtn.classList.add('btn')
+              storagebtn.classList.add('colorbtn')
+              storagebtn.classList.add('storagebtn')
+              storagebtn.setAttribute('priVal',item.price)
+              storageText.innerHTML = `${item.size}<br>+NT$${item.add}`
+
+              // storagebtn.appendChild(storageText);
+              // storageArea.appendChild(storagebtn);
+            });
+            let storagebtns = document.getElementsByClassName('storagebtn')
+            for(let btn of storagebtns){
+              btn.addEventListener('click',function(){
+                // console.log(btn);
+              let priceVal = btn.getAttributeNode('priVal').value;
+                let val = parseInt(priceVal)
+                document.querySelector('.priceArea-p').innerHTML=val;
+                document.querySelector('.n-price').innerText=val
+                console.log(typeof val);
+              })
+            }
+          }
+
+
+
+
+
+
+
+        </script>
+
+
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

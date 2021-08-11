@@ -1,0 +1,48 @@
+
+{
+    "Mac":{
+        "name":"MacBook Pro",
+            "price":"NT$39,900起",
+            "imgurl":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_TW?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1613672892000",
+            "type":[
+                {"type":"13吋MacBook Pro","des":"AppleM1晶片配備8核心CPU與8核心GPU256GB儲存空間","price":"NT$39900"},
+                {"type":"13吋MacBook Pro","des":"AppleM1晶片配備8核心CPU與8核心GPU512GB儲存空間","price":"NT$45900"}
+            ],
+            "storage":[
+                {"size":"256GB","price":"NT$39900"},
+                {"size":"512GB","price":"NT$45900"}
+            ],
+            "color":[
+                {"color":"太空灰色",
+                "colorimg":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-space-gray-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0",
+                "productimg":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_TW?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1613672892000"},
+                {"color":"銀色",
+                "colorimg":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-silver-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0",
+                "productimg":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-silver-select-202011_GEO_TW?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1613673937000"}
+            ]
+    },
+    "iPad":{
+        "name":"iPad Pro",
+            "price":"NT$24,900起",
+            "imgurl":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-11-select-202104_GEO_TW?wid=1090&hei=1100&fmt=jpeg&qlt=80&.v=1617864731000",
+            "type":[
+                {"type":"11 吋顯示器","des":"Liquid Retina 顯示器","price":"NT$24,900 起"},
+                {"type":"12.9 吋顯示器","des":"Liquid Retina XDR 顯示器","price":"NT$34,900 起"}
+            ],
+            "storage":[
+                {"size":"128GB","price":"NT$24900"},
+                {"size":"256GB","price":"NT$28000"},
+                {"size":"512GB","price":"NT$34200"},
+                {"size":"1TB","price":"NT$46600"},
+                {"size":"2TB","price":"NT$59000"}
+            ],
+            "color":[
+                {"color":"太空灰色",
+                "colorimg":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-space-gray-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0",
+                "productimg":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=940&hei=1112&fmt=p-jpg&qlt=95&.v=1617925790000"},
+                {"color":"銀色",
+                "colorimg":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-silver-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0",
+                "productimg":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=940&hei=1112&fmt=p-jpg&qlt=95&.v=1617912663000"}
+            ]
+    }
+}
